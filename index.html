@@ -16,12 +16,7 @@ html_content = """
             const url = `https://connect.ekychub.in/v3/verification/pan_redirection?username=${username}&token=${token}&mobile_number=${mobile_number}&orderid=${orderid}`;
 
             try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
+                const url = "/.netlify/functions/panProxy";
 
                 const data = await response.json();
 
